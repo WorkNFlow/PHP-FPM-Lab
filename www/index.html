@@ -11,17 +11,17 @@
       <h1 class="text-black text-2xl text-center mb-4">Бронирование билетов</h1>
       <div class="flex gap-2">
         <label for="name" class="">Имя:</label>
-        <input type="text" name="name" placeholder="Иван Иванов" class="rounded-xl px-2"/>
+        <input type="text" name="name" placeholder="Иван Иванов" class="rounded-xl px-2" required/>
       </div>
 
       <div class="flex gap-2">
         <label for="quantity">Количество билетов:</label>
-        <input type="number" name="quantity" placeholder="1" min="1" max="100" class="rounded-xl px-2"/>
+        <input type="number" name="quantity" placeholder="1" min="1" max="100" class="rounded-xl px-2" required/>
       </div>
 
       <div class="flex gap-2">
       <label for="film_name">Фильм:</label>
-      <select name="film_name" class="rounded-xl px-2">
+      <select name="film_name" class="rounded-xl px-2" required>
         <option value="Avatar3">Аватар 3</option>
         <option value="Formula1">Формула 1</option>
         <option value="Zootopia2">Зверополис 2</option>
@@ -35,20 +35,21 @@
       <div class="flex gap-4">
         <label for="seat-type">Тип места:</label>
         <div class="flex items-center gap-1">
-          <input type="radio" name="seat-type" value="standard" checked />
+          <input type="radio" name="seat-type" value="standard" checked required/>
           <label for="standard">Стандарт</label>
         </div>
         <div class="flex items-center gap-1">
-          <input type="radio" name="seat-type" value="vip" />
+          <input type="radio" name="seat-type" value="vip" required/>
           <label for="vip">VIP</label>
         </div>
       </div>
 
       <div class="flex gap-2">
         <label for="date">Дата сеанса:</label>
-        <input type="date" name="date" class="rounded-xl px-2"/>
+        <input type="date" name="date" class="rounded-xl px-2" required/>
       </div>
       <button class="p-2 rounded-xl border-2 border-green-600 bg-green-500 hover:bg-green-600 hover:text-white" type="submit">Купить</button>
     </form>
+    <script src="./app.js"></script>
   </body>
 </html>
